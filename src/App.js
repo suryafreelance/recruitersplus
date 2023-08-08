@@ -9,7 +9,7 @@ import MainLayout from "./MainLayout";
 
 function App() {
   // will update with actual user logged context
-  const isLoggedin = true;
+  const isLoggedin = false;
   return (
     <div className="">
       <BrowserRouter>
@@ -22,7 +22,7 @@ function App() {
             </Routes>
           ) : (
             <MainLayout>
-              <Routes>
+              {/* <Routes>
                 {appRoutes?.map((eachRoute) => {
                   return (
                     <Route
@@ -31,7 +31,14 @@ function App() {
                     />
                   );
                 })}
-              </Routes>
+              </Routes> */}
+               {appRoutes?.map((eachRoute) => (
+                  <Route
+                    key={eachRoute.path}
+                    path={eachRoute.path}
+                    element={<eachRoute.component />}
+                  />
+                ))}
             </MainLayout>
           )}
         </Suspense>
