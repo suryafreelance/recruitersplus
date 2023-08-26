@@ -1,7 +1,6 @@
 import "./App.css";
 import React, { Suspense } from "react";
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
-import appRoutes from "./appRoutes";
 import PageLoading from "./components/PageLoading";
 import Login from "./pages/login/Login";
 import { Registration } from "./pages/registration/Registration";
@@ -21,25 +20,7 @@ function App() {
               <Route path="/registration" element={<Registration />} />
             </Routes>
           ) : (
-            <MainLayout>
-              {/* <Routes>
-                {appRoutes?.map((eachRoute) => {
-                  return (
-                    <Route
-                      path={eachRoute.path}
-                      element={<eachRoute.component />}
-                    />
-                  );
-                })}
-              </Routes> */}
-               {appRoutes?.map((eachRoute) => (
-                  <Route
-                    key={eachRoute.path}
-                    path={eachRoute.path}
-                    element={<eachRoute.component />}
-                  />
-                ))}
-            </MainLayout>
+            <MainLayout/>
           )}
         </Suspense>
       </BrowserRouter>

@@ -20,6 +20,6 @@ const appRoutes = [
     path: "/dashboard",
     name: "Dashboard",
     component: Dashboard,
-  },
+  }
 ];
 export default appRoutes;
