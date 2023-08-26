@@ -109,7 +109,7 @@ export const Registration = () => {
         </div>
         <div className="col-md-6 p-0 login_background">
           <div className="row container d-flex justify-content-center align-items-center vh-100">
-            <div className="col-md-6 p-5">
+            <div className="col-md-6 p-4">
               <h3 className="fw-700 c-white">
                 Very good works are waiting for you Login Now!!!
               </h3>
